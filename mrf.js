@@ -83,4 +83,4 @@ let reducedData = people.reduce((acc, curr) => {
   return acc
 }, [])
 
-console.log(reducedData)
+// console.log(reducedData)
