@@ -39,4 +39,47 @@ let median = values.reduce(
   { mean: 0, median: 0 }
 )
 
-console.log(median)
+/*
+// 
+*/
+
+// Get name initials
+const names = 'George Raymond Martin'
+
+let res = names
+  .split(' ')
+  .map((name) => name[0])
+  .join('.')
+
+/*
+// 
+*/
+
+// Age difference between youngest and oldest
+const ages = [
+  { name: 'John', age: 13 },
+  { name: 'Mark', age: 56 },
+  { name: 'Rachel', age: 45 },
+  { name: 'Nate', age: 67 },
+  { name: 'Jenifer', age: 65 },
+]
+
+const ageValues = ages.map((x) => x.age)
+const difference = [
+  Math.min(...ageValues),
+  Math.max(...ageValues),
+  Math.max(...ageValues) - Math.min(...ageValues),
+]
+// console.log(difference)
+
+const sentence = 'Every developer likes to mix kubernetes and javascript'
+const createNumeronym = (word) => word[0] + (word.length - 2) + word[word.length - 1]
+
+let eligible = sentence
+  .split(' ')
+  .reduce((acc, curr) => {
+    curr.length > 3 ? acc.push(createNumeronym(curr)) : acc.push(curr)
+    return acc
+  }, [])
+  .join(' ')
+// console.log(eligible)
