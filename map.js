@@ -83,3 +83,11 @@ let eligible = sentence
   }, [])
   .join(' ')
 // console.log(eligible)
+
+// more difficulty
+const students = [
+  { name: 'Michael Jogn Usen', age: 25, grade: 75 },
+  { name: 'Kingsley Kingsley Etuk', age: 23, grade: 65 },
+  { name: 'Ignatius Solomon Brown', age: 25, grade: 55 },
+  { name: 'Christian Sadiq Mohammed', age: 22, grade: 45 },
+]
