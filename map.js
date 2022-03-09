@@ -85,9 +85,24 @@ let eligible = sentence
 // console.log(eligible)
 
 // more difficulty
-const students = [
-  { name: 'Michael Jogn Usen', age: 25, grade: 75 },
-  { name: 'Kingsley Kingsley Etuk', age: 23, grade: 65 },
-  { name: 'Ignatius Solomon Brown', age: 25, grade: 55 },
-  { name: 'Christian Sadiq Mohammed', age: 22, grade: 45 },
+
+const factorial = 6
+
+let answer = new Array(factorial)
+  .fill(null)
+  .map((curr, index) => index + 1)
+  .reduce((acc, curr) => acc * curr)
+
+// still pushing P
+const data = [
+  ['a', 'b', 'c'],
+  ['c', 'd', 'f'],
+  ['d', 'f', 'g'],
 ]
+
+let final = data.flat().reduce((acc, curr) => {
+  acc[curr] ? (acc[curr] += 1) : (acc[curr] = 1)
+  return acc
+}, {})
+
+console.log(final)
