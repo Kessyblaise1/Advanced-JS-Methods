@@ -86,6 +86,7 @@ let eligible = sentence
 
 // more difficulty
 
+// getting the factorial of any number
 const factorial = 6
 
 let answer = new Array(factorial)
@@ -93,7 +94,7 @@ let answer = new Array(factorial)
   .map((curr, index) => index + 1)
   .reduce((acc, curr) => acc * curr)
 
-// still pushing P
+// determining the number of times a particular letter occurs in an array
 const data = [
   ['a', 'b', 'c'],
   ['c', 'd', 'f'],
@@ -105,4 +106,30 @@ let final = data.flat().reduce((acc, curr) => {
   return acc
 }, {})
 
-console.log(final)
+// Return the longest word in a supplied string
+const words = 'Web Development Tutorial'
+
+let done = words.split(' ').reduce((acc, curr) => {
+  if (acc.length < curr.length) {
+    acc = curr
+  }
+  return acc
+})
+
+// count the number or vowels in a supplied string
+
+const vowelCheck = 'The quick brown fox'
+
+function checkVowels(string) {
+  let vowels = 'aeiouAEIOU'
+  let vowelCount = 0
+
+  for (x = 0; x < string.length; x++) {
+    if (vowels.indexOf(string[x]) !== -1) {
+      vowelCount += 1
+    }
+  }
+  return vowelCount
+}
+
+console.log(checkVowels(vowelCheck))
