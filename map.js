@@ -115,21 +115,3 @@ let done = words.split(' ').reduce((acc, curr) => {
   }
   return acc
 })
-
-// count the number or vowels in a supplied string
-
-const vowelCheck = 'The quick brown fox'
-
-function checkVowels(string) {
-  let vowels = 'aeiouAEIOU'
-  let vowelCount = 0
-
-  for (x = 0; x < string.length; x++) {
-    if (vowels.indexOf(string[x]) !== -1) {
-      vowelCount += 1
-    }
-  }
-  return vowelCount
-}
-
-console.log(checkVowels(vowelCheck))
